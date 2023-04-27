@@ -20,6 +20,8 @@ ChinmayiC-FastAPI is a FastAPI-based application that fetches data from SuiteCRM
 
 3. Install the required dependencies:
 
+    pip install -r requirements.txt
+
 4. Set up the PostgreSQL database and update the `create_connection()` function in `models.py` with your database credentials.
 
 5. Run the FastAPI server:
