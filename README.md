@@ -13,10 +13,10 @@ ChinmayiC-FastAPI is a FastAPI-based application that fetches data from SuiteCRM
 
 2. Create a virtual environment and activate it:
 
-    cd ChinmayiC-FastAPI
-    python -m venv env
-    source env/bin/activate # For Linux and macOS
-    env\Scripts\activate # For Windows
+   - cd ChinmayiC-FastAPI
+   - python -m venv env
+   - source env/bin/activate # For Linux and macOS
+   - env\Scripts\activate # For Windows
 
 3. Install the required dependencies:
 
