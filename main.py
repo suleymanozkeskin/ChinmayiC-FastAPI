@@ -12,6 +12,11 @@ app = FastAPI()
 app.include_router(btc_router)
 
 
+# Display a welcome message
+@app.get("/")
+def index():
+    return {"message": "Welcome to FastAPI Task. Go to /fetch_leads to fetch leads from SuiteCRM and store them in PostgreSQL database.Additionally, go to /fetch_btc_price to fetch and store Bitcoin price in PostgreSQL database."}
+
 class LoginData(BaseModel):
     username: str
     password: str

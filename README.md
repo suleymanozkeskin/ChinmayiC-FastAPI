@@ -28,6 +28,12 @@ ChinmayiC-FastAPI is a FastAPI-based application that fetches data from SuiteCRM
 
 The server will start listening on `http://localhost:8000`.
 
+## Alternative Installation with Docker
+
+    - sudo docker build -t chinmayi_c .
+    - sudo docker run -d --name chinmayi_c_container -p 8000:8000 chinmayi_c
+The server will start listening on `http://localhost:8000`.
+
 ## Usage
 
 You can test the application using an HTTP client like `httpie` or Postman.
