@@ -1,3 +1,4 @@
+# models.py
 from sqlalchemy import create_engine, Column, Integer, String,Float,DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -28,4 +29,14 @@ class BitcoinPrice(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     price = Column(Float)
+    timestamp = Column(DateTime)
+
+class BitcoinOHLC(Base):
+    __tablename__ = "bitcoin_ohlc"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    open_price = Column(Float)
+    high_price = Column(Float)
+    low_price = Column(Float)
+    close_price = Column(Float)
     timestamp = Column(DateTime)

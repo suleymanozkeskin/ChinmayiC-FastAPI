@@ -1,3 +1,4 @@
+# fetch_btc_price.py
 import requests
 from models import BitcoinPrice, create_table_and_connection
 from datetime import datetime
@@ -50,3 +51,4 @@ def test():
     assert isinstance(timestamp, str)
     dt = datetime.fromisoformat(timestamp)
     assert isinstance(dt, datetime)
+

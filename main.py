@@ -1,15 +1,18 @@
+# main.py
 from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
 import hashlib
 import json
 from models import Lead, create_table_and_connection
-from fetch_btc_price import router as btc_router
+# from fetch_btc_price import router as btc_router
+from btc_binance_api import router as btc_router
+
 
 
 app = FastAPI()
 
-app.include_router(btc_router)
+app.include_router(btc_router, prefix='/btc')
 
 
 # Display a welcome message
@@ -111,7 +114,9 @@ async def fetch_and_store_leads(login_data: LoginData):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # run with reload
+    uvicorn.run("main:app", host="localhost", port=8000, reload=True)
+   
 
 
 
